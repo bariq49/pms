@@ -27,7 +27,7 @@ export function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="relative w-40 lg:h-48 h-20 ">
+          <Link href="/" className="relative w-40 lg:h-24 h-20 ">
             <Image
               src="/WhatsApp_Image_2025-03-10_at_20.48.08_145b3981-removebg-preview.png"
               alt="Pak Mobile Store"

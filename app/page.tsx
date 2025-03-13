@@ -38,6 +38,7 @@ export default function Home() {
     }
   ];
 
+  
   const newArrivals = [
     {
       name: 'Airpods pro 2',

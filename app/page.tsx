@@ -5,9 +5,10 @@ import { Button } from '@/components/ui/button';
 import { Phone, Clock, CreditCard, Truck, Star, Shield, Gift, PhoneCall, Smartphone, Wrench, Package, Banknote, Navigation } from 'lucide-react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+// import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { TopHeroSlider } from '@/components/ui/TopHeroSlider';
+import Slider from 'react-slick';
 
 export default function Home() {
   const featuredBrands = [

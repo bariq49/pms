@@ -173,88 +173,20 @@ export default function Home() {
     }
   ];
 
-  const Logos = [
-    {
-      image: '/honor_logo_2.png',
-    },
-    {
-      image:"/aple_logo.png"
-    },
-    {
-      image:"/log-logo.png"
-    },
-    {
-      image:"/motorola.png"
-    },
-    {
-      image:"/huawei-logo.png"
-    },
-    {
-      image:"/samsung_logo.png"
-    },
-    {
-      image:"/xiaomi.png"
-    },
-    {
-      image:"/nokia_logo.png"
-    },
-    {
-      image:'/sony_logo.png'
-    },
-    {
-      image:'/logo-oppo.png'
-    },
-    {
-      image:"/htc_logo.png"
-    }  
-  ];
-
 
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToShow: 6, 
+    slidesToScroll: 1, 
     nextArrow: <NextArrow />, 
         prevArrow: <PrevArrow />, 
     responsive: [
-      {
-        breakpoint: 1024, 
-        settings: { slidesToShow: 3 },
-      },
-      {
-        breakpoint: 768,  
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 480,  
-        settings: { slidesToShow: 1 },
-      },
-    ],
-  };
-
-  const settings1 = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 7,
-    slidesToScroll: 1,
-    nextArrow: <NextArrow />, 
-        prevArrow: <PrevArrow />, 
-    responsive: [
-      {
-        breakpoint: 1024, 
-        settings: { slidesToShow: 3 },
-      },
-      {
-        breakpoint: 768,  
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 480,  
-        settings: { slidesToShow: 1 },
-      },
+      { breakpoint: 1280, settings: { slidesToShow: 6 } },  
+      { breakpoint: 1024, settings: { slidesToShow: 4 } },  
+      { breakpoint: 640, settings: { slidesToShow: 2 } },  
+      { breakpoint: 320, settings: { slidesToShow: 1 } }, 
     ],
   };
 
@@ -349,180 +281,118 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50 overflow-hidden px-8 sm:px-12">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-6 sm:mb-8">
-        La mejor selección de móviles libres
-        </h2>
-        <p className="text-center text-gray-600 mb-8 sm:mb-12">
-        Esta es nuestra mejor selección de móviles libres. Los últimos móviles del mercado y los móviles con mejores prestaciones. Ahora en maxmovil.com puedes encontrar las mejores marcas en nuestra selección de productos de móviles libres.
-        </p>
-        <Slider {...settings}>
-          {newArrivals.map((product, index) => (
-            <div key={index} className="px-2">
-              <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-md transition-all duration-300 group hover:shadow-lg flex flex-col h-auto">
-                <div className="relative h-[55%] overflow-hidden">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    width={300}
-                    height={400}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 max-h-[300px]"
-                  />
-                  <span className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs sm:text-sm">
-                    {product.tag}
-                  </span>
-                </div>
+      {/* New Arrivals Section */}
+      <section className="py-16 bg-gray-50 overflow-hidden px-12">
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl font-bold text-center mb-8">
+      Novedades destacadas en smartphones, tablets y wearables
+    </h2>
+    <p className="text-center text-gray-600 mb-12">
+      Actualizamos diariamente las novedades en smartphones, tablets y wearables. Encuentra rápidamente los nuevos modelos tecnológicos incorporados en nuestra página web.
+    </p>
 
-                <div className="p-4 flex flex-col justify-between h-[45%]">
-                  <h3 className="text-md font-semibold text-gray-800">
-                    {product.name}
-                  </h3>
-                  <span className="text-lg font-semibold text-[#F7A416]">
-                    {product.price}
-                  </span>
-
-                  <Link
-                    href="/contact"
-                    className="mt-3 bg-primary text-white text-center py-2 px-4 rounded-lg transition-all duration-300 hover:bg-[#F7A416] hover:text-white"
-                  >
-                    Comprar
-                  </Link>
-                </div>
+    {/* Custom Slider */}
+    <Slider {...settings}>
+      {newArrivals.map((product, index) => (
+        <div key={index} className="px-2">
+          <div className="bg-white hover:border   overflow-hidden group h-[450px] flex flex-col">
+            <div className="relative h-[60%]">
+              <Image
+                src={product.image}
+                alt={product.name}
+                width={300}
+                height={400}
+                className="w-full h-full object-cover "
+              />
+              <span className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm">
+                {product.tag}
+              </span>
+            </div>
+            <div className="p-6 flex flex-col justify-between h-[40%]">
+              <h3 className="text-sm font-semibold">{product.name}</h3>
+                <span className="text-md text-center font-semibold text-primary text-[#F7A416] ">{product.price}</span>
+              <div className="flex flex-col">
+                <Link href="/contact"className='bg-white text-black text-center hover:text-[#F7A416]'>
+                  Comprar
+                </Link>
               </div>
             </div>
-          ))}
-        </Slider>
-      </div>
-    </section>
-
-    <section className="py-16 ">
-  <div className="container mx-auto lg:px-24">
-    <div className="relative w-full h-48 overflow-hidden group">
-      <Image
-        src="/Banner_Maxmovil_1220X150.jpg"
-        alt="Banner"
-        fill
-        className="object-fill transition-transform duration-300 group-hover:scale-105"
-      />
-    </div>
+          </div>
+        </div>
+      ))}
+    </Slider>
   </div>
 </section>
 
 
-<section className="py-16 bg-gray-50 overflow-hidden px-12 sm:px-12">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-6 sm:mb-8">
-        Novedades destacadas en smartphones, tablets y wearables
-        </h2>
-        <p className="text-center text-gray-600 mb-8 sm:mb-12">
-        Actualizamos diariamente las novedades en smartphones, tablets y wearables. En maxmovil.com puedes encontrar rápidamente los nuevos modelos tecnológicos incorporados en nuestra página web.
-        </p>
-        <Slider {...settings}>
-          {newArrivals.map((product, index) => (
-            <div key={index} className="px-2">
-              <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-md transition-all duration-300 group hover:shadow-lg flex flex-col h-auto">
-                <div className="relative h-[55%] overflow-hidden">
+      {/* Featured Brands */}
+      {/* <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Marcas Destacadas</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {featuredBrands.map((brand, index) => (
+              <div key={index} className="relative h-48 group overflow-hidden rounded-lg">
+                <Image
+                  src={brand.image}
+                  alt={brand.name}
+                  fill
+                  className="object-cover transition-transform group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                  <h3 className="text-2xl font-bold text-white">{brand.name}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section> */}
+
+      {/* Featured Products */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Ofertas Destacadas</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {featuredProducts.map((product, index) => (
+              <div key={index} className="group relative bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="absolute top-4 right-4 z-10 bg-red-500 text-white px-2 py-1 rounded">
+                  -{product.discount}
+                </div>
+                <div className="relative h-80">
                   <Image
                     src={product.image}
                     alt={product.name}
-                    width={300}
-                    height={400}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 max-h-[300px]"
+                    fill
+                    className="object-cover transition-transform group-hover:scale-105"
                   />
-                  <span className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs sm:text-sm">
-                    {product.tag}
-                  </span>
                 </div>
-
-                <div className="p-4 flex flex-col justify-between h-[45%]">
-                  <h3 className="text-md font-semibold text-gray-800">
-                    {product.name}
-                  </h3>
-                  <span className="text-lg font-semibold text-[#F7A416]">
-                    {product.price}
-                  </span>
-
-                  <Link
-                    href="/contact"
-                    className="mt-3 bg-primary text-white text-center py-2 px-4 rounded-lg transition-all duration-300 hover:bg-[#F7A416] hover:text-white"
-                  >
-                    Comprar
-                  </Link>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+                  <div className="flex items-center justify-between">
+                    <span className="text-2xl font-bold text-primary">{product.price}</span>
+                    <Button size="sm">Ver Detalles</Button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
-    </section>
-
-
-    <section className="py-16 ">
-  <div className="container mx-auto lg:px-24">
-    <div className="relative w-full h-48 overflow-hidden group">
-      <Image
-        src="/Banner_Maxmovil_1220X150.jpg"
-        alt="Banner"
-        fill
-        className="object-fill transition-transform duration-300 group-hover:scale-105"
-      />
-    </div>
-  </div>
-</section>
-
-
-<section className="py-16 bg-gray-50 overflow-hidden px-12 sm:px-12">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-6 sm:mb-8">
-        Comprar móviles y smartphones online con un amplio catálogo con las mejores marcas
-
-        </h2>
-        <p className="text-center text-gray-600 mb-8 sm:mb-12">
-        En Maxmovil.com puedes comprar artículos de electrónica con total garantía. Consulta nuestra lista de mejores marcas para encontrar lo que buscas y descubrir nuevos fabricantes. Fuimos pioneros como tienda de móviles online, y año tras año vamos ampliando nuestro catálogo y ofreciéndote las mejores ventajas de compra. Encuentra el smartphone que más te gusta y explora las otras secciones de nuestro comercio electrónico.
-        </p>
-        <Slider {...settings1}>
-          {Logos.map((product, index) => (
-            <div key={index} className="px-2">
-                <div className="relative h-[55%] overflow-hidden">
-                  <Image
-                    src={product.image}
-                    alt={product.image}
-                    width={300}
-                    height={400}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 max-h-[100px]"
-                  />
-                  
-                </div>
-              </div>
-          ))}
-        </Slider>
-      </div>
-    </section>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Newsletter Section */}
       <section className="py-16 bg-primary text-white">
-  <div className="container mx-auto px-4 text-center">
-    <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-      ¡No Te Pierdas Nuestras Ofertas!
-    </h2>
-    <p className="mb-6 text-base sm:text-lg">
-      Suscríbete a nuestra newsletter y recibe las mejores ofertas
-    </p>
-
-    <div className="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
-      <input
-        type="email"
-        placeholder="Tu correo electrónico"
-        className="flex-1 px-4 py-2 rounded-lg text-black"
-      />
-      <Button variant="secondary" className="w-full sm:w-auto">
-        Suscribirse
-      </Button>
-    </div>
-  </div>
-</section>
-
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">¡No Te Pierdas Nuestras Ofertas!</h2>
+          <p className="mb-8 text-lg">Suscríbete a nuestra newsletter y recibe las mejores ofertas</p>
+          <div className="max-w-md mx-auto flex gap-4">
+            <input
+              type="email"
+              placeholder="Tu correo electrónico"
+              className="flex-1 px-4 py-2 rounded-lg text-black"
+            />
+            <Button variant="secondary">Suscribirse</Button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

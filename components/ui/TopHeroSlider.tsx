@@ -16,9 +16,9 @@ export function TopHeroSlider() {
         nextArrow: <NextArrow />, 
             prevArrow: <PrevArrow />, 
         responsive: [
-          { breakpoint: 1280, settings: { slidesToShow: 1 } },  
-          { breakpoint: 1024, settings: { slidesToShow: 1 } },  
-          { breakpoint: 640, settings: { slidesToShow: 1 } },  
+          { breakpoint: 1280, settings: { slidesToShow: 6 } },  
+          { breakpoint: 1024, settings: { slidesToShow: 4 } },  
+          { breakpoint: 640, settings: { slidesToShow: 2 } },  
           { breakpoint: 320, settings: { slidesToShow: 1 } }, 
         ],
       };
@@ -34,10 +34,10 @@ export function TopHeroSlider() {
       ];
 return (
     <>
-     <section className="relative lg:h-[400px] h-[300px] overflow-hidden px-6 lg:px-24">
+     <section className="relative h-[400px] overflow-hidden px-24">
       <Slider {...settings}>
         {images.map((src, index) => (
-          <div key={index} className="lg:h-[400px] h-[300px] relative">
+          <div key={index} className="h-[400px] relative">
             <Image src={src} alt={`Slide ${index + 1}`} fill className="object-fill" priority />
           </div>
         ))}

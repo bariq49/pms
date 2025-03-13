@@ -9,9 +9,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Logo and About */}
           <div>
-            <Link href="/" className="relative w-40 lg:h-48 h-24 block">
+            <Link href="/" className="relative w-48 h-16 block mb-4">
               <Image
-                src="/WhatsApp_Image_2025-03-10_at_20.48.08_145b3981-removebg-preview.png"
+                src="/logo.png"
                 alt="Pak Mobile Store"
                 fill
                 className="object-contain brightness-0 invert"

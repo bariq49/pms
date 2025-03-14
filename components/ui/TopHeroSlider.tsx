@@ -1,71 +1,107 @@
-
+import { useState, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image from 'next/image';
+import Image from "next/image";
 import Slider from "react-slick";
 
 export function TopHeroSlider() {
-    const settings = {
-        dots: true,
-        infinite: true,
-        autoplay:true,
-        speed: 500,
-        autoplaySpeed: 2000,
-        slidesToShow: 1, 
-        slidesToScroll: 1, 
-        nextArrow: <NextArrow />, 
-            prevArrow: <PrevArrow />, 
-        responsive: [
-          { breakpoint: 1280, settings: { slidesToShow: 1 } },  
-          { breakpoint: 1024, settings: { slidesToShow: 1 } },  
-          { breakpoint: 640, settings: { slidesToShow: 1 } },  
-          { breakpoint: 320, settings: { slidesToShow: 1 } }, 
-        ],
-      };
-    
-        const images = [
-        "/202307122837slider-1.jpg",
-        "/blonde-young-woman-using-smartphone-holding-cell-phone-copy-space-for-banner-design-concept-free-photo.jpg",
-    "/csm_Apple_iPhone_16_Pro_Concept4_7f42bb9d9e.jpg",
-    "/galaxy-s23-ultra-highlights-kv.jpg",
-    "/hero_endframe__b3cjfkquc2s2_xlarge.jpg",
-    "/heroImg.webp",
-    "/iphone-16_overview__fcivqu9d5t6q_og.png"
-      ];
-return (
-    <>
-     <section className="relative lg:h-[400px] h-[300px] overflow-hidden px-6 lg:px-24">
+  const [images, setImages] = useState<string[]>([]);
+
+  // Define images for different screen sizes
+  const largeScreenImages = [
+    "/Banner_D_a_del_Padre_Web.png",
+    "/Banner_iPhone_16_Web.png",
+    "/Banner_seQura_2025_Web (1).png",
+    "/Samsung_Galaxy_S25_Web (1).png",
+  ];
+
+  const smallScreenImages = [
+    "/Banner_iPhone_16_Movil.png",
+    "/Banner_D_a_del_Padre_Movil (1).png",
+    "/Samsung_Galaxy_S25_Movil.png",
+  ];
+
+  // Detect screen size and update images accordingly
+  useEffect(() => {
+    const updateImages = () => {
+      if (window.innerWidth >= 1024) {
+        setImages(largeScreenImages);
+      } else {
+        setImages(smallScreenImages);
+      }
+    };
+
+    updateImages(); // Call initially
+
+    // Listen for window resize to update images dynamically
+    window.addEventListener("resize", updateImages);
+    return () => window.removeEventListener("resize", updateImages);
+  }, []);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    autoplaySpeed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { arrows: false },
+      },
+    ],
+  };
+
+  return (
+    <section className="relative lg:h-[400px] h-[450px] overflow-hidden p-2 lg:px-24">
       <Slider {...settings}>
         {images.map((src, index) => (
-          <div key={index} className="lg:h-[400px] h-[300px] relative">
-            <Image src={src} alt={`Slide ${index + 1}`} fill className="object-fill" priority />
+          <div key={index} className="lg:h-[400px] h-[450px] relative">
+            <Image
+              src={src}
+              alt={`Slide ${index + 1}`}
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         ))}
       </Slider>
     </section>
-    </>
-)
+  );
 }
-
 
 const NextArrow = (props: any) => {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} right-[-10px] absolute cursor-pointer z-10`}
-      style={{ ...style, display: "block", background: "#F6A41A", borderRadius: "50%" }}
+      className={`${className} right-[-10px] absolute cursor-pointer z-10 hidden lg:block`}
+      style={{
+        ...style,
+        display: "block",
+        background: "#F6A41A",
+        borderRadius: "50%",
+      }}
       onClick={onClick}
     />
   );
 };
 
-// Custom Left Arrow
 const PrevArrow = (props: any) => {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} left-[-10px] absolute cursor-pointer z-10`}
-      style={{ ...style, display: "block", background: "#F6A41A", borderRadius: "50%" ,}}
+      className={`${className} left-[-10px] absolute cursor-pointer z-10 hidden sm:block`}
+      style={{
+        ...style,
+        display: "block",
+        background: "#F6A41A",
+        borderRadius: "50%",
+      }}
       onClick={onClick}
     />
   );

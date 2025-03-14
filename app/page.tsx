@@ -15,6 +15,13 @@ export default function Home() {
     { name: 'Apple', image: 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&q=80&w=300&h=200' },
     { name: 'Samsung', image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=300&h=200' },
     { name: 'Xiaomi', image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&q=80&w=300&h=200' },
+
+    { name: 'Apple', image: 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&q=80&w=300&h=200' },
+    { name: 'Samsung', image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=300&h=200' },
+    { name: 'Xiaomi', image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&q=80&w=300&h=200' },
+    { name: 'Samsung', image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=300&h=200' },
+    { name: 'Xiaomi', image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&q=80&w=300&h=200' },
+
   ];
 
   const featuredProducts = [
@@ -73,7 +80,7 @@ export default function Home() {
     {
       name: 'sam A15 128+6RAM  ',
       price: ' 135€',
-      image: 'https://images.unsplash.com/photo-1637159773228-a77c2a977c89?auto=format&fit=crop&q=80&w=300&h=400',
+      image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
       tag: 'NOVEDAD'
     },
     {
@@ -82,72 +89,72 @@ export default function Home() {
       image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
       tag: 'NOVEDAD'
     },
-    {
-      name: 'sam A55 256GB   ',
-      price: '  320€',
-      image: 'https://images.unsplash.com/photo-1637159773228-a77c2a977c89?auto=format&fit=crop&q=80&w=300&h=400',
-      tag: 'NOVEDAD'
-    },
-    {
-      name: 'sam A16 5G 128gb',
-      price: '140€',
-      image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
-      tag: 'NOVEDAD'
-    },
-    {
-      name: 'sam A15 128+6RAM  ',
-      price: ' 135€',
-      image: 'https://images.unsplash.com/photo-1637159773228-a77c2a977c89?auto=format&fit=crop&q=80&w=300&h=400',
-      tag: 'NOVEDAD'
-    },
-    {
-      name: 'sam A35 5G 128gb  ',
-      price: '220€',
-      image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
-      tag: 'NOVEDAD'
-    },
-    {
-      name: 'sam S24 ULTRA 256GB   ',
-      price: '  830€',
-      image: 'https://images.unsplash.com/photo-1637159773228-a77c2a977c89?auto=format&fit=crop&q=80&w=300&h=400',
-      tag: 'NOVEDAD'
-    },
-    {
-      name: 'redmi 14C 256+8  ',
-      price: ' 105€',
-      image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
-      tag: 'NOVEDAD'
-    },
-    {
-      name: 'redmi note 11s 128+6  ',
-      price: '118€',
-      image: 'https://images.unsplash.com/photo-1637159773228-a77c2a977c89?auto=format&fit=crop&q=80&w=300&h=400',
-      tag: 'NOVEDAD'
-    },
-       {
-      name: 'redmi note 12pro plus 256gb 5G  ',
-      price: ' 245€',
-      image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
-      tag: 'NOVEDAD'
-    },
-    {
-      name: 'Redmi note 13pro 5G 512GB  ',
-      price: ' 278€',
-      image: 'https://images.unsplash.com/photo-1637159773228-a77c2a977c89?auto=format&fit=crop&q=80&w=300&h=400',
-      tag: 'NOVEDAD'
-    },
-    {
-      name: 'Redmi note 13pro plus 512+12 5G   ',
-      price: '  318€',
-      image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
-      tag: 'NOVEDAD'
-    },
-    {
-      name: 'Redmi note 14pro 5G 256gb',
-      price: ' 245€',
-      image: 'https://images.unsplash.com/photo-1637159773228-a77c2a977c89?auto=format&fit=crop&q=80&w=300&h=400',
-      tag: 'NOVEDAD'
-    }
+    // {
+    //   name: 'sam A55 256GB   ',
+    //   price: '  320€',
+    //   image: 'https://images.unsplash.com/photo-1637159773228-a77c2a977c89?auto=format&fit=crop&q=80&w=300&h=400',
+    //   tag: 'NOVEDAD'
+    // },
+    // {
+    //   name: 'sam A16 5G 128gb',
+    //   price: '140€',
+    //   image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
+    //   tag: 'NOVEDAD'
+    // },
+    // {
+    //   name: 'sam A15 128+6RAM  ',
+    //   price: ' 135€',
+    //   image: 'https://images.unsplash.com/photo-1637159773228-a77c2a977c89?auto=format&fit=crop&q=80&w=300&h=400',
+    //   tag: 'NOVEDAD'
+    // },
+    // {
+    //   name: 'sam A35 5G 128gb  ',
+    //   price: '220€',
+    //   image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
+    //   tag: 'NOVEDAD'
+    // },
+    // {
+    //   name: 'sam S24 ULTRA 256GB   ',
+    //   price: '  830€',
+    //   image: 'https://images.unsplash.com/photo-1637159773228-a77c2a977c89?auto=format&fit=crop&q=80&w=300&h=400',
+    //   tag: 'NOVEDAD'
+    // },
+    // {
+    //   name: 'redmi 14C 256+8  ',
+    //   price: ' 105€',
+    //   image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
+    //   tag: 'NOVEDAD'
+    // },
+    // {
+    //   name: 'redmi note 11s 128+6  ',
+    //   price: '118€',
+    //   image: 'https://images.unsplash.com/photo-1637159773228-a77c2a977c89?auto=format&fit=crop&q=80&w=300&h=400',
+    //   tag: 'NOVEDAD'
+    // },
+    //    {
+    //   name: 'redmi note 12pro plus 256gb 5G  ',
+    //   price: ' 245€',
+    //   image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
+    //   tag: 'NOVEDAD'
+    // },
+    // {
+    //   name: 'Redmi note 13pro 5G 512GB  ',
+    //   price: ' 278€',
+    //   image: 'https://images.unsplash.com/photo-1637159773228-a77c2a977c89?auto=format&fit=crop&q=80&w=300&h=400',
+    //   tag: 'NOVEDAD'
+    // },
+    // {
+    //   name: 'Redmi note 13pro plus 512+12 5G   ',
+    //   price: '  318€',
+    //   image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
+    //   tag: 'NOVEDAD'
+    // },
+    // {
+    //   name: 'Redmi note 14pro 5G 256gb',
+    //   price: ' 245€',
+    //   image: 'https://images.unsplash.com/photo-1637159773228-a77c2a977c89?auto=format&fit=crop&q=80&w=300&h=400',
+    //   tag: 'NOVEDAD'
+    // }
     
   ];
 
@@ -210,54 +217,77 @@ export default function Home() {
     }  
   ];
 
-
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
     nextArrow: <NextArrow />, 
-        prevArrow: <PrevArrow />, 
+    prevArrow: <PrevArrow />, 
     responsive: [
       {
         breakpoint: 1024, 
-        settings: { slidesToShow: 3 },
+        settings: { slidesToShow: 4, arrows: false }, 
       },
       {
         breakpoint: 768,  
-        settings: { slidesToShow: 2 },
+        settings: { slidesToShow: 3, arrows: false }, 
       },
       {
         breakpoint: 480,  
-        settings: { slidesToShow: 1 },
+        settings: { slidesToShow: 2, arrows: false },  
       },
     ],
   };
-
+  
   const settings1 = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 7,
     slidesToScroll: 1,
     nextArrow: <NextArrow />, 
-        prevArrow: <PrevArrow />, 
+    prevArrow: <PrevArrow />, 
     responsive: [
       {
         breakpoint: 1024, 
-        settings: { slidesToShow: 3 },
+        settings: { slidesToShow: 3, arrows: false }, 
       },
       {
         breakpoint: 768,  
-        settings: { slidesToShow: 2 },
+        settings: { slidesToShow: 2, arrows: false },  
       },
       {
         breakpoint: 480,  
-        settings: { slidesToShow: 1 },
+        settings: { slidesToShow: 1, arrows: false },  
       },
     ],
   };
+
+  const settings2 = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 7,
+    slidesToScroll: 1,
+   arrows:false,
+    responsive: [
+      {
+        breakpoint: 1024, 
+        settings: { slidesToShow: 3 }, 
+      },
+      {
+        breakpoint: 768,  
+        settings: { slidesToShow: 2},  
+      },
+      {
+        breakpoint: 480,  
+        settings: { slidesToShow: 2},  
+      },
+    ],
+  };
+  
 
 
  
@@ -294,26 +324,25 @@ export default function Home() {
       </section>
 
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Categorías</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredBrands.map((brand, index) => (
-              <div key={index} className="relative h-48 group overflow-hidden rounded-lg">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-12">Categorías</h2>
+        <Slider {...settings2}>
+          {featuredBrands.map((brand, index) => (
+            <div key={index} className="flex flex-col items-center justify-center">
+              <div className="w-40 h-40 relative overflow-hidden rounded-full">
                 <Image
                   src={brand.image}
                   alt={brand.name}
                   fill
-                  className="object-cover transition-transform group-hover:scale-105"
+                  className="object-cover"
                 />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                  <h3 className="text-2xl font-bold text-white">{brand.name}</h3>
-                </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+              <h3 className="mt-4 text-xl font-bold text-center">{brand.name}</h3>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </section>
       {/* Benefits Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
@@ -350,7 +379,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50 overflow-hidden px-8 sm:px-12">
+      <section className="py-16 bg-gray-50 overflow-hidden px-2 lg:px-12">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-6 sm:mb-8">
         La mejor selección de móviles libres
@@ -384,7 +413,7 @@ export default function Home() {
                   </span>
 
                   <Link
-                    href="/contact"
+                    href="/checkout"
                     className="mt-3 bg-primary text-white text-center py-2 px-4 rounded-lg transition-all duration-300 hover:bg-[#F7A416] hover:text-white"
                   >
                     Comprar
@@ -399,19 +428,19 @@ export default function Home() {
 
     <section className="py-16 ">
   <div className="container mx-auto lg:px-24">
-    <div className="relative w-full h-48 overflow-hidden group">
+    <div className="relative w-full h-64 overflow-hidden group">
       <Image
-        src="/Banner_Maxmovil_1220X150.jpg"
+        src="/pexels-jakubzerdzicki-17571892.jpg"
         alt="Banner"
         fill
-        className="object-fill transition-transform duration-300 group-hover:scale-105"
+        className="object-cover transition-transform duration-300 group-hover:scale-105"
       />
     </div>
   </div>
 </section>
 
 
-<section className="py-16 bg-gray-50 overflow-hidden px-12 sm:px-12">
+<section className="py-16 bg-gray-50 overflow-hidden px-2 lg:px-12">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-6 sm:mb-8">
         Novedades destacadas en smartphones, tablets y wearables
@@ -445,7 +474,7 @@ export default function Home() {
                   </span>
 
                   <Link
-                    href="/contact"
+                    href="/checkout"
                     className="mt-3 bg-primary text-white text-center py-2 px-4 rounded-lg transition-all duration-300 hover:bg-[#F7A416] hover:text-white"
                   >
                     Comprar
@@ -461,12 +490,12 @@ export default function Home() {
 
     <section className="py-16 ">
   <div className="container mx-auto lg:px-24">
-    <div className="relative w-full h-48 overflow-hidden group">
+    <div className="relative w-full h-64 overflow-hidden group">
       <Image
-        src="/Banner_Maxmovil_1220X150.jpg"
+        src="/pexels-jakubzerdzicki-17571892.jpg"
         alt="Banner"
         fill
-        className="object-fill transition-transform duration-300 group-hover:scale-105"
+        className="object-cover transition-transform duration-300 group-hover:scale-105"
       />
     </div>
   </div>
@@ -500,7 +529,7 @@ export default function Home() {
         </Slider>
       </div>
     </section>
-
+    
       {/* Newsletter Section */}
       <section className="py-16 bg-primary text-white">
   <div className="container mx-auto px-4 text-center">
@@ -540,7 +569,6 @@ const NextArrow = (props: any) => {
   );
 };
 
-// Custom Left Arrow
 const PrevArrow = (props: any) => {
   const { className, style, onClick } = props;
   return (

@@ -1,14 +1,14 @@
 "use client";
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Phone, ShoppingCart, User, Menu } from 'lucide-react';
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Phone, ShoppingCart, User, Menu } from "lucide-react";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white border-b">
+    <header className="bg-white border-b relative">
       {/* Top Bar */}
       <div className="bg-primary text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center text-sm">
@@ -17,58 +17,31 @@ export function Header() {
             <span>Llámanos: 900 123 456</span>
           </div>
           <div className="hidden sm:flex gap-4">
-            <Link href="/mi-cuenta" className="hover:underline">Mi Cuenta</Link>
-            <Link href="/seguimiento" className="hover:underline">Seguimiento de Pedido</Link>
+            <Link href="/mi-cuenta" className="hover:underline">
+              Mi Cuenta
+            </Link>
+            <Link href="/seguimiento" className="hover:underline">
+              Seguimiento de Pedido
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Main Header */}
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="relative w-40 lg:h-48 h-20 ">
-            <Image
-              src="/WhatsApp_Image_2025-03-10_at_20.48.08_145b3981-removebg-preview.png"
-              alt="Pak Mobile Store"
-              fill
-              className="object-contain"
-              priority
-            />
-          </Link>
+      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="relative w-16 h-14 sm:h-16">
+          <Image
+            src="/WhatsApp_Image_2025-03-10_at_20.48.08_145b3981-removebg-preview.png"
+            alt="Pak Mobile Store"
+            fill
+            className="object-contain"
+            priority
+          />
+        </Link>
 
-          {/* Search */}
-          <div className="hidden md:flex flex-1 max-w-xl mx-4">
-            <input
-              type="search"
-              placeholder="Buscar productos..."
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-            />
-          </div>
-
-          {/* Actions */}
-          <div className="flex items-center gap-4 sm:gap-6">
-            <Link href="/mi-cuenta" className="hidden sm:flex items-center gap-2 hover:text-primary">
-              <User className="h-5 w-5" />
-              <span>Mi Cuenta</span>
-            </Link>
-            <Link href="/carrito" className="flex items-center gap-2 hover:text-primary">
-              <ShoppingCart className="h-5 w-5" />
-              <span className="hidden sm:inline">Carrito</span>
-            </Link>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="sm:hidden p-2 border rounded-lg"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <Menu className="h-6 w-6" />
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Search */}
-        <div className="mt-3 md:hidden">
+        {/* Search Bar (Hidden on Mobile) */}
+        <div className="hidden lg:flex lg:flex-1 max-w-xl mx-4">
           <input
             type="search"
             placeholder="Buscar productos..."
@@ -76,30 +49,63 @@ export function Header() {
           />
         </div>
 
-        {/* Navigation */}
-        <nav className={`mt-4 ${isMenuOpen ? 'block' : 'hidden'} sm:block`}>
-          <ul className="flex flex-col sm:flex-row gap-3 sm:gap-8 text-center sm:text-left">
-            <li>
-              <Link href="/" className="block py-2 sm:py-0 hover:text-primary">Inicio</Link>
-            </li>
-            {/* <li>
-              <Link href="/tienda" className="block py-2 sm:py-0 hover:text-primary">Tienda</Link>
-            </li>
-            <li>
-              <Link href="/marcas" className="block py-2 sm:py-0 hover:text-primary">Marcas</Link>
-            </li>
-            <li>
-              <Link href="/ofertas" className="block py-2 sm:py-0 hover:text-primary">Ofertas</Link>
-            </li>
-            <li>
-              <Link href="/sobre-nosotros" className="block py-2 sm:py-0 hover:text-primary">Sobre Nosotros</Link>
-            </li> */}
-            <li>
-              <Link href="/contacto" className="block py-2 sm:py-0 hover:text-primary">Contacto</Link>
-            </li>
-          </ul>
-        </nav>
+        {/* Navigation Menu (Visible on Large Screens) */}
+        <ul className="hidden lg:flex gap-6">
+          <li>
+            <Link href="/" className="block py-2 hover:text-primary">
+              Inicio
+            </Link>
+          </li>
+          <li>
+            <Link href="/contacto" className="block py-2 hover:text-primary">
+              Contacto
+            </Link>
+          </li>
+        </ul>
+
+        {/* Actions */}
+        <div className="flex items-center gap-4 sm:gap-6">
+          {/* Mobile Menu Button */}
+          <button
+            className="sm:hidden p-2 border rounded-lg"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <Menu className="h-6 w-6" />
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Navigation */}
+      <nav
+        className={`fixed z-50 top-0 left-0 w-3/4 h-full bg-white shadow-lg transform transition-transform duration-300 ${
+          isMenuOpen ? "translate-x-0" : "-translate-x-full"
+        } sm:hidden`}
+      >
+        <div className="p-4 border-b flex justify-between items-center">
+          <span className="text-lg font-semibold">Menú</span>
+          <button onClick={() => setIsMenuOpen(false)}>✖</button>
+        </div>
+        <ul className="flex flex-col gap-3 p-4">
+          <li>
+            <Link href="/" className="block py-2 hover:text-primary">
+              Inicio
+            </Link>
+          </li>
+          <li>
+            <Link href="/contacto" className="block py-2 hover:text-primary">
+              Contacto
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+      {/* Overlay for Mobile Menu */}
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 sm:hidden"
+          onClick={() => setIsMenuOpen(false)}
+        ></div>
+      )}
     </header>
   );
 }

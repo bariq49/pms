@@ -9,16 +9,16 @@ export function TopHeroSlider() {
 
   // Define images for different screen sizes
   const largeScreenImages = [
-    "/Banner_D_a_del_Padre_Web.png",
-    "/Banner_iPhone_16_Web.png",
-    "/Banner_seQura_2025_Web (1).png",
+    "/snimok-ekrana-2024-09-09-214140-66df4bf14b89d.jpg",
+    "/XXXL.webp",
+    "/128-gb-60-gc-25-vt-vsyo-eto-prosto-nepriemlemo-dlya-flagmana-v-2024-godu-1.jpeg",
     "/Samsung_Galaxy_S25_Web (1).png",
   ];
 
   const smallScreenImages = [
-    "/Banner_iPhone_16_Movil.png",
-    "/Banner_D_a_del_Padre_Movil (1).png",
-    "/Samsung_Galaxy_S25_Movil.png",
+    "/snimok-ekrana-2024-09-09-214140-66df4bf14b89d.jpg",
+    "/XXXL.webp",
+    "/128-gb-60-gc-25-vt-vsyo-eto-prosto-nepriemlemo-dlya-flagmana-v-2024-godu-1.jpeg",
   ];
 
   // Detect screen size and update images accordingly

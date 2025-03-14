@@ -45,6 +45,64 @@ export default function Home() {
     }
   ];
 
+  const newArival2 = [
+    {
+      name: 'sam A05S 128+6  ',
+      price: ' 110€',
+      image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
+      tag: 'NOVEDAD'
+    },
+    {
+      name: 'sam A15 128+6RAM  ',
+      price: ' 135€',
+      image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
+      tag: 'NOVEDAD'
+    },
+    {
+      name: 'sam A35 128gb  ',
+      price: '  220€',
+      image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
+      tag: 'NOVEDAD'
+    },
+    {
+      name: 'Airpods pro 2',
+      price: '200€',
+      image: 'https://images.unsplash.com/photo-1576243345690-4e4b79b63288?auto=format&fit=crop&q=80&w=300&h=400',
+      tag: 'NOVEDAD'
+    },
+    {
+      name: 'iPhone 13 128GB ',
+      price: '470€',
+      image: 'https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&q=80&w=300&h=400',
+      tag: 'NOVEDAD'
+    },
+    {
+      name: ' iPhone 16 128GB  ',
+      price: '  765€',
+      image: 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80&w=300&h=400',
+      tag: 'NOVEDAD'
+    },
+    {
+      name: 'iPhone 16pro 128GB ',
+      price: ' 980€',
+      image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&q=80&w=300&h=400',
+      tag: 'NOVEDAD'
+    },
+    {
+      name: 'sam A05S 128+6  ',
+      price: ' 110€',
+      image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
+      tag: 'NOVEDAD'
+    },
+    {
+      name: 'sam A15 128+6RAM  ',
+      price: ' 135€',
+      image: 'https://images.unsplash.com/photo-1567581935884-3349723552ca?auto=format&fit=crop&q=80&w=300&h=400',
+      tag: 'NOVEDAD'
+    },
+
+  ]
+
   
   const newArrivals = [
     {
@@ -298,34 +356,21 @@ export default function Home() {
      
 
       {/* Services Section */}
-      <section className="py-16 bg-white">
+      <section className="py-4 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Envía dinero y compra accesorios móviles en Pak Mobiles</h2>
+            <h2 className="lg:text-3xl text-lg font-bold mb-4">Envía dinero y compra accesorios móviles en Pak Mobiles</h2>
             <p className="text-gray-600 max-w-4xl mx-auto">
-            En Pak Mobiles, puedes enviar dinero, comprar accesorios móviles y explorar una amplia gama de smartphones y dispositivos electrónicos de las mejores marcas. Nuestro extenso catálogo cuenta con garantía total, lo que garantiza calidad y fiabilidad. Como pioneros en la venta de móviles online, seguimos ampliando nuestra colección para ofrecerte las mejores ofertas y ventajas. ¡Encuentra el smartphone perfecto y explora nuestra tienda para descubrir los últimos accesorios y artículos tecnológicos esenciales!
+            En Pak Mobiles, envía dinero, compra accesorios y explora una amplia gama de smartphones y dispositivos electrónicos con garantía total. Como pioneros en ventas online, seguimos ampliando nuestro catálogo para ofrecerte las mejores ofertas. ¡Encuentra tu smartphone ideal y descubre lo último en tecnología!
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div key={index} className="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
-                  <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <Icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-center mb-3">{service.title}</h3>
-                  <p className="text-gray-600 text-center">{service.description}</p>
-                </div>
-              );
-            })}
-          </div>
+         
         </div>
       </section>
 
       <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Categorías</h2>
+        <h2 className="lg:text-3xl text-xl  font-bold text-left mb-12">Categorías</h2>
         <Slider {...settings2}>
           {featuredBrands.map((brand, index) => (
             <div key={index} className="flex flex-col items-center justify-center">
@@ -343,45 +388,11 @@ export default function Home() {
         </Slider>
       </div>
     </section>
-      {/* Benefits Section */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="flex items-center gap-4 p-4 border rounded-lg">
-              <Shield className="h-10 w-10 text-primary" />
-              <div>
-                <h3 className="font-semibold">Garantía Oficial</h3>
-                <p className="text-sm text-gray-600">2 años de garantía</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 p-4 border rounded-lg">
-              <Truck className="h-10 w-10 text-primary" />
-              <div>
-                <h3 className="font-semibold">Envío Rápido</h3>
-                <p className="text-sm text-gray-600">24/48h laborables</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 p-4 border rounded-lg">
-              <CreditCard className="h-10 w-10 text-primary" />
-              <div>
-                <h3 className="font-semibold">Pago Seguro</h3>
-                <p className="text-sm text-gray-600">Múltiples métodos</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 p-4 border rounded-lg">
-              <PhoneCall className="h-10 w-10 text-primary" />
-              <div>
-                <h3 className="font-semibold">Atención Personal</h3>
-                <p className="text-sm text-gray-600">Soporte especializado</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <section className="py-16 bg-gray-50 overflow-hidden px-2 lg:px-12">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-6 sm:mb-8">
+        <h2 className="lg:text-3xl text-lg font-bold text-center mb-6 sm:mb-8">
         La mejor selección de móviles libres
         </h2>
         <p className="text-center text-gray-600 mb-8 sm:mb-12">
@@ -442,14 +453,14 @@ export default function Home() {
 
 <section className="py-16 bg-gray-50 overflow-hidden px-2 lg:px-12">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-6 sm:mb-8">
+        <h2 className="lg:text-3xl text-lg font-bold text-center mb-6 sm:mb-8">
         Novedades destacadas en smartphones, tablets y wearables
         </h2>
         <p className="text-center text-gray-600 mb-8 sm:mb-12">
         Actualizamos diariamente las novedades en smartphones, tablets y wearables. En maxmovil.com puedes encontrar rápidamente los nuevos modelos tecnológicos incorporados en nuestra página web.
         </p>
         <Slider {...settings}>
-          {newArrivals.map((product, index) => (
+          {newArival2.map((product, index) => (
             <div key={index} className="px-2">
               <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-md transition-all duration-300 group hover:shadow-lg flex flex-col h-auto">
                 <div className="relative h-[55%] overflow-hidden">
@@ -504,7 +515,7 @@ export default function Home() {
 
 <section className="py-16 bg-gray-50 overflow-hidden px-12 sm:px-12">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-6 sm:mb-8">
+        <h2 className="lg:text-3xl text-lg font-bold text-center mb-6 sm:mb-8">
         Comprar móviles y smartphones online con un amplio catálogo con las mejores marcas
 
         </h2>
@@ -529,6 +540,62 @@ export default function Home() {
         </Slider>
       </div>
     </section>
+
+    {/* Benefits Section */}
+    <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="flex items-center gap-4 p-4 border rounded-lg">
+              <Shield className="h-10 w-10 text-primary" />
+              <div>
+                <h3 className="font-semibold">Garantía Oficial</h3>
+                <p className="text-sm text-gray-600">2 años de garantía</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 p-4 border rounded-lg">
+              <Truck className="h-10 w-10 text-primary" />
+              <div>
+                <h3 className="font-semibold">Envío Rápido</h3>
+                <p className="text-sm text-gray-600">24/48h laborables</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 p-4 border rounded-lg">
+              <CreditCard className="h-10 w-10 text-primary" />
+              <div>
+                <h3 className="font-semibold">Pago Seguro</h3>
+                <p className="text-sm text-gray-600">Múltiples métodos</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 p-4 border rounded-lg">
+              <PhoneCall className="h-10 w-10 text-primary" />
+              <div>
+                <h3 className="font-semibold">Atención Personal</h3>
+                <p className="text-sm text-gray-600">Soporte especializado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+         
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <div key={index} className="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow">
+                  <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                    <Icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-center mb-3">{service.title}</h3>
+                  <p className="text-gray-600 text-center">{service.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
     
       {/* Newsletter Section */}
       <section className="py-16 bg-primary text-white">

@@ -1,11 +1,34 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, ShoppingCart, User, Menu } from "lucide-react";
+import { Phone, ShoppingCart, User, Menu, BaggageClaim } from "lucide-react";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    const storedCart = localStorage.getItem("cart");
+    if (storedCart) {
+      const parsedCart = JSON.parse(storedCart);
+      if (Array.isArray(parsedCart)) {
+        setCartCount(parsedCart.length);
+      }
+    }
+
+    const handleStorageChange = () => {
+      const updatedCart = JSON.parse(localStorage.getItem("cart") || "[]");
+      setCartCount(updatedCart.length);
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
+  }, []);
+
+
 
   return (
     <header className="bg-white border-b relative">
@@ -49,7 +72,6 @@ export function Header() {
           />
         </div>
 
-        {/* Navigation Menu (Visible on Large Screens) */}
         <ul className="hidden lg:flex gap-6">
           <li>
             <Link href="/" className="block py-2 hover:text-primary">
@@ -57,15 +79,29 @@ export function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/contacto" className="block py-2 hover:text-primary">
+            <Link href="/contact" className="block py-2 hover:text-primary">
               Contacto
             </Link>
+          </li>
+          <li>
+       
+            <Link href="/cart" className="relative flex items-center hover:text-primary">
+              <ShoppingCart className="h-6 w-6" />
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                  {cartCount}
+                </span>
+              )}
+            </Link>
+        
           </li>
         </ul>
 
         {/* Actions */}
         <div className="flex items-center gap-4 sm:gap-6">
-          {/* Mobile Menu Button */}
+          {/* Shopping Cart Icon */}
+          
+
           <button
             className="sm:hidden p-2 border rounded-lg"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -92,14 +128,28 @@ export function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/contacto" className="block py-2 hover:text-primary">
+            <Link href="/contact" className="block py-2 hover:text-primary">
               Contacto
             </Link>
+
           </li>
+          <li>
+         
+            <Link href="/cart" className="relative flex items-center hover:text-primary">
+              <ShoppingCart className="h-6 w-6" />
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                  {cartCount}
+                </span>
+              )}
+            </Link>
+         
+          </li>
+          
+       
         </ul>
       </nav>
 
-      {/* Overlay for Mobile Menu */}
       {isMenuOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 sm:hidden"

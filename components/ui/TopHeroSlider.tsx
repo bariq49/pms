@@ -9,16 +9,17 @@ export function TopHeroSlider() {
 
   // Define images for different screen sizes
   const largeScreenImages = [
-    "/snimok-ekrana-2024-09-09-214140-66df4bf14b89d.jpg",
-    "/XXXL.webp",
-    "/128-gb-60-gc-25-vt-vsyo-eto-prosto-nepriemlemo-dlya-flagmana-v-2024-godu-1.jpeg",
-    "/Samsung_Galaxy_S25_Web (1).png",
+    "/2.jpg",
+    "/4.jpg",
+    "/1.jpg",
+    "/3.jpg",
   ];
 
   const smallScreenImages = [
-    "/snimok-ekrana-2024-09-09-214140-66df4bf14b89d.jpg",
-    "/XXXL.webp",
-    "/128-gb-60-gc-25-vt-vsyo-eto-prosto-nepriemlemo-dlya-flagmana-v-2024-godu-1.jpeg",
+    "/6.jpg",
+    "/7.jpg",
+    "/8.jpg",
+    "/5.jpg"
   ];
 
   // Detect screen size and update images accordingly
@@ -60,12 +61,12 @@ export function TopHeroSlider() {
     <section className="relative lg:h-[400px] h-[450px] overflow-hidden p-2 lg:px-24">
       <Slider {...settings}>
         {images.map((src, index) => (
-          <div key={index} className="lg:h-[400px] h-[450px] relative">
+          <div key={index} className="lg:h-[300px] h-[450px] relative">
             <Image
               src={src}
               alt={`Slide ${index + 1}`}
               fill
-              className="object-cover"
+              className="object-center"
               priority
             />
           </div>
